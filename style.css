@@ -1,0 +1,79 @@
+#container{
+  background-color: yellowgreen;
+  height: 90vh;
+  width: 90vw;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1em;
+  display: grid;
+  grid-template-rows: repeat(12,1fr);
+  grid-template-columns: repeat(12,1fr);
+  grid-gap: 10px;
+}
+
+.in{
+  background-color: pink;
+  text-align: center;
+  padding: auto auto;
+  border-radius: 5px;
+}
+
+#header{
+  grid-column: 1/ span 12;
+}
+
+#sidebar{
+  grid-column: 1/ span 3;
+  grid-row: 2/ span 10;
+}
+
+#nav{
+  grid-column: 4/ span 6;
+}
+
+#ads{
+  grid-column: 10/ span 3;
+  grid-row: 2/ span 10;
+}
+
+#main{
+  grid-column: 4/ span 6;
+  grid-row: 3/ span 9;
+}
+
+#footer{
+  grid-row: 12/ span 1;
+  grid-column: 1/ span 12;
+}
+
+@media (max-width: 720px) {
+
+  #container{
+    background-color: pink;
+  }
+
+  .in{
+    color: maroon;
+    background-color: yellowgreen;
+  }
+
+  #nav{
+    grid-row: 2/ span 1;
+    grid-column: 1/ span 12;
+  }
+  #sidebar{
+    grid-row: 3/ span 9;
+    grid-column: 1/ span 3;
+  }
+  #main{
+    grid-row: 3/ span 9;
+    grid-column: 4/ span 9;
+  }
+  #ads{
+    grid-row: 12/ span 1;
+    grid-column: 1/ span 3;
+  }
+  #footer{
+    grid-row: 12/ span 1;
+    grid-column: 4/ span 9;
+  }
+}
